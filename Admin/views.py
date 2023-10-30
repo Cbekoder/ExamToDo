@@ -30,6 +30,12 @@ def yoshi_kattalar(request):
     }
     return render(request, 'katta_talabalar.html', content)
 
+def bitiruvchilar_rejalar(request):
+    content = {
+        'planlar' : Plan.objects.filter(student_fk__course__gt = 2)
+    }
+    return render(request, "bitiruvchilar_rejalar.html", content)
+
 def planlar(request):
     if request.method == 'POST':
         forma = PlanForm(request.POST)
