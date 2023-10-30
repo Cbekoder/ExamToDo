@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bajalarilmagan rejalar</title>
+</head>
+<body>
+    <h1>Tizimdagi bajarilmagan rejalar ro'yhati</h1>
+    <br>
+    <hr>
+    <ul>
+    {%for plan in planlar %}
+    <li><h3>{{plan.student_fk }} - {{ plan.title}}</h3></li>
+    {% endfor %}
+    </ul>
+    <hr>
+</body>
+</html>

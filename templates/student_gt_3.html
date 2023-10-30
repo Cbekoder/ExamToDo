@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talabalar</title>
+</head>
+<body>
+    <h1>Tizimdagi kamida 3-kurs bo'lgan talabalar ro'yxati</h1>
+    <br>
+    <hr>
+    <ul>
+    {%for talaba in studentlar %}
+    <li><h3>{{ talaba.student_id}}. {{talaba.name }}</h3></li>
+    {% endfor %}
+    </ul>
+    <hr>
+</body>
+</html>

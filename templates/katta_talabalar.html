@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Katta talabalar</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar</title>
+</head>
+<body>
+    <h1>Tizimdagi 20 yoshdan katta talabalar ro'yxati</h1>
+    <br>
+    <hr>
+    {%for talaba in talabalar %}
+    <br>
+    <h1>
+    {{ talaba.name }} : {{ talaba.age }}</a>
+    </h1>
+    {% endfor %}
+</body>
+</html>
