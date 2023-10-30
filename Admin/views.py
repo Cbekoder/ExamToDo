@@ -8,6 +8,11 @@ def homepage(request):
 
 
 def studentlar(request):
+    if request.method == 'POST':
+        forma = StudentForm(request.POST)
+        if forma.is_valid():
+            forma.save()
+        return redirect("/studentlar/")
     content = {
         'studentlar' : Author.objects.all(),
         "forma": StudentForm()
@@ -54,6 +59,12 @@ def undone(request):
     }
     return render(request, 'undone.html', content)
 
+def talaba_rejalari(request, talaba_id):
+    content = {
+        "planlar" : Plan.objects.filter(student_fk__id=talaba_id),
+        "student" : Author.objects.get(id = talaba_id)
+    }
+    return render(request, "talaba_rejalari.html", content)
 def del_plan(request, plan_id):
     Plan.objects.get(id=plan_id).delete()
     return redirect("/rejalar/")

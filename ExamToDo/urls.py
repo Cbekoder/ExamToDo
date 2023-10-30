@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage),
     path('studentlar/', studentlar),
+    path('studentlar/<int:talaba_id>', talaba_rejalari),
     path('yoshi_kattalar/', yoshi_kattalar),
     path('bitiruvchilar_rejalar/', bitiruvchilar_rejalar),
     path('bitiruvchilar/', student_gt_3),

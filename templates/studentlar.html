@@ -11,7 +11,7 @@
     <hr>
     <ul>
     {%for talaba in studentlar %}
-    <li><h3>{{ talaba.student_id}}. {{talaba.name }}   <a href="/del_student/{{talaba.id}}"><button>O'chirish</button></a></h3></li>
+    <li><h3><a href = "/studentlar/{{talaba.id}}">{{ talaba.student_id}}</a>. {{talaba.name }}   <a href="/del_student/{{talaba.id}}"><button>O'chirish</button></a></h3></li>
     {% endfor %}
     </ul>
     <hr>

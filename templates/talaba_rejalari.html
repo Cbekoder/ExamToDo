@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talaba rejalari</title>
+</head>
+<body>
+    <h1> {{ student.name }}ning rejalari ro'yhati</h1>
+    <br>
+    <hr>
+    {%for plan in planlar %}
+    <br>
+    <h1>{{plan.id}}. {{plan.title}} ({{plan.sana}})</h1>
+    {% endfor %}
+</body>
+</html>
